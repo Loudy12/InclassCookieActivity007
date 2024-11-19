@@ -40,8 +40,9 @@ $filter = "All Paintings [Top 20]";
               <?php foreach ($paintings as $work) : ?>
                   <li class="item">
                       <a class="ui small image" href="single-painting.php?id=<?php echo htmlspecialchars($work['PaintingID'], ENT_QUOTES, 'UTF-8'); ?>">
-                          <img src="images/art/works/square-medium/<?php echo htmlspecialchars($work['ImageFileName'], ENT_QUOTES, 'UTF-8'); ?>.jpg" 
-                               alt="<?php echo htmlspecialchars($work['Title'], ENT_QUOTES, 'UTF-8'); ?>">
+                          <<img src="images/art/square-medium/<?php echo htmlspecialchars($work['ImageFileName'], ENT_QUOTES, 'UTF-8'); ?>.jpg"
+                          alt="<?php echo htmlspecialchars($work['Title'], ENT_QUOTES, 'UTF-8'); ?>">
+
                       </a>
                       <div class="content">
                           <a class="header" href="single-painting.php?id=<?php echo htmlspecialchars($work['PaintingID'], ENT_QUOTES, 'UTF-8'); ?>">
