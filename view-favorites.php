@@ -1,8 +1,21 @@
 <?php
+session_start();
+$favorites = $_SESSION['favorites'] ?? [];
 
-
-
-
+if (!empty($favorites)) {
+    echo '<table>';
+    foreach ($favorites as $painting) {
+        echo '<tr>';
+        echo '<td><img src="images/art/works/small-square/' . htmlspecialchars($painting['ImageFileName']) . '" alt="' . htmlspecialchars($painting['Title']) . '"></td>';
+        echo '<td><a href="single-painting.php?PaintingID=' . urlencode($painting['PaintingID']) . '">' . htmlspecialchars($painting['Title']) . '</a></td>';
+        echo '<td><a href="remove-favorites.php?PaintingID=' . urlencode($painting['PaintingID']) . '" class="btn">Remove</a></td>';
+        echo '</tr>';
+    }
+    echo '</table>';
+    echo '<a href="remove-favorites.php?clear=all" class="btn">Clear All Favorites</a>';
+} else {
+    echo 'No favorites yet.';
+}
 ?>
 
 <!DOCTYPE html>

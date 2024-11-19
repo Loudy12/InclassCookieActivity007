@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
 
 <form class="ui form" method="get" action="browse-paintings.php">
