@@ -1,5 +1,9 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
+
 
 include 'includes/data.inc.php';
 include 'includes/art-functions.inc.php';
