@@ -1,9 +1,7 @@
-<?php
+<?php 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
-
-
 
 include 'includes/data.inc.php';
 include 'includes/art-functions.inc.php';
@@ -62,8 +60,8 @@ $filter = "All Paintings [Top 20]";
                               <a class="ui icon orange button" href="cart.php?id=<?php echo htmlspecialchars($work['PaintingID'], ENT_QUOTES, 'UTF-8'); ?>" aria-label="Add to cart">
                                   <i class="add to cart icon"></i>
                               </a>
-                              <a class="ui icon button" href="favorites.php?id=<?php echo htmlspecialchars($work['PaintingID'], ENT_QUOTES, 'UTF-8'); ?>" aria-label="Add to favorites">
-                                  <i class="heart icon"></i>
+                              <a class="ui icon button" href="addToFavorites.php?PaintingID=<?php echo urlencode($work['PaintingID']); ?>&ImageFileName=<?php echo urlencode($work['ImageFileName']); ?>&Title=<?php echo urlencode($work['Title']); ?>" aria-label="Add to favorites">
+                                  <i class="heart icon"></i> Add to Favorites
                               </a>  
                           </div>        
                       </div>      

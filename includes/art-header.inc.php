@@ -20,13 +20,9 @@ if (session_status() === PHP_SESSION_NONE) {
                 </div>
                 <a class="item" href="view-favorites.php">
                   <i class="heartbeat icon"></i> Favorites
-                  <?php
-                  if (!empty($_SESSION['favorites'])) {
-                      echo '<div class="ui red mini label">';
-                      echo count($_SESSION['favorites']);
-                      echo '</div>';
-                  }
-                  ?>
+                  <?php if (!empty($_SESSION['favorites'])): ?>
+                      <div class="ui red mini label"><?php echo count($_SESSION['favorites']); ?></div>
+                  <?php endif; ?>
                 </a>        
                 <a class="item">
                   <i class="shop icon"></i> Cart

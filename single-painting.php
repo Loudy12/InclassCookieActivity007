@@ -63,6 +63,13 @@ if (!$row) {
                     </div>  
                 </div>                          
                 
+                <!-- Add to Favorites Button -->
+                <div class="ui buttons">
+                    <a class="ui labeled icon button" href="addToFavorites.php?PaintingID=<?php echo urlencode($row['PaintingID']); ?>&ImageFileName=<?php echo urlencode($row['ImageFileName']); ?>&Title=<?php echo urlencode($row['Title']); ?>">
+                        <i class="heart icon"></i> Add to Favorites
+                    </a>
+                </div>
+
                 <!-- Tabs For Details, Museum, Genre, Subjects -->
                 <?php include 'includes/painting-small-tabs.inc.php'; ?>
                 
