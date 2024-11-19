@@ -35,9 +35,9 @@ $favorites = isset($_SESSION['favorites']) ? $_SESSION['favorites'] : [];
                 <?php foreach ($favorites as $favorite): ?>
                     <tr>
                         <td>
-                        <img src="images/art/square-medium/<?php echo htmlspecialchars($favorite['ImageFileName'], ENT_QUOTES, 'UTF-8'); ?>.jpg" 
-                        alt="<?php echo htmlspecialchars($favorite['Title'], ENT_QUOTES, 'UTF-8'); ?>">
-
+                            <img src="images/art/square-medium/<?php echo htmlspecialchars($favorite['ImageFileName'], ENT_QUOTES, 'UTF-8'); ?>.jpg" 
+                                 alt="<?php echo htmlspecialchars($favorite['Title'], ENT_QUOTES, 'UTF-8'); ?>" 
+                                 class="ui small image">
                         </td>
                         <td>
                             <a href="single-painting.php?id=<?php echo htmlspecialchars($favorite['PaintingID'], ENT_QUOTES, 'UTF-8'); ?>">
